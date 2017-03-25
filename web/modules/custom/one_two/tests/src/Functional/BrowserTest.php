@@ -5,10 +5,10 @@ namespace Drupal\Tests\one_two\Functional;
 use Drupal\Tests\BrowserTestBase;
 
 /**
-* Example functional test.
-*
-* @group one_two
-*/
+ * Example functional test.
+ *
+ * @group one_two
+ */
 class BrowserTest extends BrowserTestBase {
 
   protected $user;
@@ -18,7 +18,7 @@ class BrowserTest extends BrowserTestBase {
   protected function setUp() {
     parent::setUp();
     $this->drupalCreateContentType(['type' => 'page', 'name' => 'Basic page']);
-    $this->user = $this->drupalCreateUser(['edit own page content', 'create page content' ]);
+    $this->user = $this->drupalCreateUser(['edit own page content', 'create page content']);
     $this->drupalPlaceBlock('local_tasks_block');
   }
 
@@ -37,4 +37,5 @@ class BrowserTest extends BrowserTestBase {
     $this->assertEquals($title, $node->getTitle());
     $this->assertEquals($body, $node->body->value);
   }
+
 }
