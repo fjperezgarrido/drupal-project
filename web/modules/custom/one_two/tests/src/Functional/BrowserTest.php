@@ -15,6 +15,9 @@ class BrowserTest extends BrowserTestBase {
 
   public static $modules = ['block', 'node', 'datetime'];
 
+  /**
+   * setup function
+   */
   protected function setUp() {
     parent::setUp();
     $this->drupalCreateContentType(['type' => 'page', 'name' => 'Basic page']);
@@ -22,7 +25,11 @@ class BrowserTest extends BrowserTestBase {
     $this->drupalPlaceBlock('local_tasks_block');
   }
 
+  /**
+   * tests
+   */
   function testDrupalGet() {
+
     $this->drupalGet('user/register');
     $this->assertSession()->pageTextContains('Create new account');
     $this->assertSession()->fieldExists('Email address');
