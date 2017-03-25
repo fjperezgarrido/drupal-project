@@ -22,6 +22,17 @@ class BrowserTest extends BrowserTestBase {
     $this->drupalPlaceBlock('local_tasks_block');
   }
 
+  function testDrupalGet() {
+    $this->drupalGet('user/register');
+    $this->assertSession()->pageTextContains('Create new account');
+    $this->assertSession()->fieldExists('Email address');
+    $this->assertSession()->fieldExists('Username');
+    $this->assertSession()->buttonExists('Create new account');
+    $this->assertSession()->pageTextNotContains('Joomla');
+  }
+  /**
+   * Example testNodeCreate
+   */
   function testNodeCreate() {
     $this->drupalLogin($this->user);
     $title = $this->randomString();
