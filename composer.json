@@ -42,6 +42,7 @@
         "drupal/core": "~8.0",
         "drupal/devel": "^1.0@RC",
         "drush/drush": "~8.0",
+        "symfony/var-dumper": "^3.2",
         "webflo/drupal-finder": "^0.2.1",
         "webmozart/path-util": "^2.3"
     },
