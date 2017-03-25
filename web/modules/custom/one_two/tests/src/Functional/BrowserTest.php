@@ -16,7 +16,7 @@ class BrowserTest extends BrowserTestBase {
   public static $modules = ['block', 'node', 'datetime'];
 
   /**
-   * setup function
+   * Setup function
    */
   protected function setUp() {
     parent::setUp();
@@ -26,7 +26,7 @@ class BrowserTest extends BrowserTestBase {
   }
 
   /**
-   * tests
+   * Tests
    */
   function testDrupalGet() {
 
